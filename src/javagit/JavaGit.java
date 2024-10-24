@@ -10,12 +10,13 @@ public class JavaGit {
               nem viszek kabátot
         */
         
+        final int HIDEG_HATAR = 10;
         int homerseklet = 7;
-        String eredmeny = "Nem viszek kabátot.";
+        boolean hidegVan = homerseklet < HIDEG_HATAR;
+        String eredmeny = "Hideg van, viszek kabátot.";
         
-        if (homerseklet < 10) {
-            eredmeny = "Hideg van, viszek kabátot.";
-        }
+        /* termális operátorral: */
+        eredmeny = hidegVan ? eredmeny : "Nem viszek kabátot. " + eredmeny;
         
         System.out.println(eredmeny);
     }
